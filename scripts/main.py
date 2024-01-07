@@ -6,7 +6,7 @@ coco_model = YOLO('yolov8n.pt') # car detector model pretrain w COCO dataset
 license_plate_detector = YOLO('path to trained license plate model')
 
 # load video
-cv2.VideoCapture('./samples/sample1.mp4')
+cap = cv2.VideoCapture('./samples/sample1.mp4')
 
 # read frames
 frame_nmr = -1
