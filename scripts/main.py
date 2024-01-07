@@ -1,6 +1,10 @@
 from ultralytics import YOLO
 import cv2
 
+from sort.sort import *
+
+mot_tracker = Sort()
+
 # load models
 coco_model = YOLO('yolov8n.pt') # car detector model pretrain w COCO dataset
 #license_plate_detector = YOLO('path to trained license plate model')
@@ -25,4 +29,4 @@ while ret:
                 detections_.append([x1, y1, x2, y2, score]) # in this example we don't care about the type of vehicle
 
         # track vehicles
-        
+        track_ids = mot_tracker.update(np.asarray(detections_)) #vehicles detected with tracking IDs and information
