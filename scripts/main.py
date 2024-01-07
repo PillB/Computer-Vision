@@ -22,4 +22,7 @@ while ret:
         for detection in detections.boxes.data.toList():
             x1, y1, x2, y2, score, class_id = detection #score is the confidence in the prediction, the class_id is the type of object
             if int(class_id) in vehicles:
-                pass
+                detections_.append([x1, y1, x2, y2, score]) # in this example we don't care about the type of vehicle
+
+        # track vehicles
+        
