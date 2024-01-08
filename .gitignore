@@ -1,1 +1,5 @@
 samples/*
+model_training/*
+model_training/License Plate Recognition/test/*
+model_training/License Plate Recognition/train/*
+model_training/License Plate Recognition/valid/*
